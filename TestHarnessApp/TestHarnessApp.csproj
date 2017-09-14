@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C0CF6B8-D2CE-411F-A725-67ED0AF87024}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestHarnessApp</RootNamespace>
+    <AssemblyName>TestHarnessApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TestExecutive.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppDomainManager\AppDomainManager.csproj">
+      <Project>{ed6a000b-ac5b-4175-9f38-0663dd6d027e}</Project>
+      <Name>AppDomainManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BlockingQueue\BlockingQueue.csproj">
+      <Project>{d2b524cd-316f-48d5-9d1a-302953a31126}</Project>
+      <Name>BlockingQueue</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileManager\FileManager.csproj">
+      <Project>{7342c722-2598-41a3-8f80-9070f905b3ae}</Project>
+      <Name>FileManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITest\ITest.csproj">
+      <Project>{dca965f4-711c-415a-9af8-98713e0b4077}</Project>
+      <Name>ITest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loader\Loader.csproj">
+      <Project>{62bc296a-d0fb-4975-ac62-6edf2c1840d1}</Project>
+      <Name>Loader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logger\Logger.csproj">
+      <Project>{b9d2bcfe-a444-462c-8a70-88e7e3f785e1}</Project>
+      <Name>Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestCode1\TestCode1.csproj">
+      <Project>{53484a59-a3b3-47f4-95a0-e35e89f63697}</Project>
+      <Name>TestCode1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestCode2\TestCode2.csproj">
+      <Project>{7e2e8d26-8f29-472b-90ea-451cf8c59b2a}</Project>
+      <Name>TestCode2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestCode3\TestCode3.csproj">
+      <Project>{f70d648d-d09d-4bc9-826c-e0515b89b7bd}</Project>
+      <Name>TestCode3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestCode4\TestCode4.csproj">
+      <Project>{ecca2687-9a41-4159-8a02-4cece600efb8}</Project>
+      <Name>TestCode4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestDriver1\TestDriver1.csproj">
+      <Project>{956da307-b976-40c9-9d96-17d1db2591fc}</Project>
+      <Name>TestDriver1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestDriver2\TestDriver2.csproj">
+      <Project>{1856428e-e57c-4d69-a2ed-7531a7c438b8}</Project>
+      <Name>TestDriver2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestDriver3\TestDriver3.csproj">
+      <Project>{633790d5-4be4-4df9-b695-0bf5bf57d6fa}</Project>
+      <Name>TestDriver3</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
